@@ -19,7 +19,63 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 nav {
     font-family: 'Space Grotesk Regular';
     font-size: 18px;
+}
+
+div {
+    font-family: 'Montserrat';
+}
+
+h1 {
+    font-family: 'Montserrat Bold';
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.03em;
+}
+
+p {
+    margin-bottom: 1.2em;
+}
+
+.intro-box {
+    background: rgba(0, 0, 0, .99);
+    border-radius: 60px;
+    padding: 20px;
+}
+
+.profile-picture {
+    max-width: 80% !important;
+    border-radius: 30%;
+    border: 3px solid #000;
+    display: inline-block;
+}
+
+.navbar-links-box{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 16px;
+}
+
+.navbar-logo-link:hover {
+    filter: brightness(2) sepia(1) saturate(10) hue-rotate(10deg) drop-shadow(0 0 0px #f5e272);
 }
