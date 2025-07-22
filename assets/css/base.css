@@ -34,7 +34,7 @@
 }
 
 body {
-    background: black;
+    background-color: black !important;
 }
 
 div {
@@ -55,13 +55,11 @@ p {
 
 .intro-box {
     background: rgba(0, 0, 0, .99);
-    border-radius: 60px;
     padding: 20px;
 }
 
 .profile-picture {
     max-width: 80% !important;
-    border-radius: 30%;
     border: 3px solid #000;
     display: inline-block;
 }
@@ -69,7 +67,7 @@ p {
 /* Navbar styles */
 
 nav {
-    background-color: rgba(0, 0, 0, 0.7) !important;
+    background-color: rgba(0, 0, 0, 0) !important;
     font-family: 'Space Grotesk Regular';
     font-size: 18px;
 }
@@ -102,8 +100,24 @@ nav {
     border: none !important;
 }
 
+/** Fullpage.js styles **/
+
+#fp-nav span {
+    background: #fff !important;
+}
+
+.fp-tooltip {
+    font-family: 'Montserrat' !important;
+    top: -4px !important;
+}
+
 @media (max-width: 991.98px) {
     .navbar-links-box {
         right: 70px !important;
+    }
+
+    .profile-picture {
+        max-width: 50% !important;
+        margin-bottom: 20px;
     }
 }
