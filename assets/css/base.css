@@ -68,7 +68,7 @@ p {
 
 nav {
     background-color: rgba(0, 0, 0, 0) !important;
-    font-family: 'Space Grotesk Regular';
+    font-family: 'Space Grotesk Regular' !important;
     font-size: 18px;
 }
 
