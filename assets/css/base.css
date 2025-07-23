@@ -127,3 +127,226 @@ nav {
         margin-bottom: 20px;
     }
 }
+
+/* Footer styles */
+
+.site-footer {
+    width: 100%;
+    background: #000;
+    color: #f5e272;
+    padding: 32px 0;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 1.1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.19,1,0.56,1), opacity 0.5s cubic-bezier(0.19,1,0.56,1);
+}
+
+.site-footer.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.site-footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+}
+
+.site-footer .footer-content span {
+    flex: 0 0 auto;
+}
+
+.site-footer .footer-content .footer-mail {
+    margin-left: auto;
+    font-size: 1rem;
+    opacity: 0.8;
+    text-align: right;
+}
+
+@media (max-width: 700px) {
+    .site-footer .footer-content {
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .site-footer .footer-content .footer-mail {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* Panels Style*/
+
+/* Common panel style */
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 999;
+    color: #000;
+    box-sizing: border-box;
+    background-color: #000;
+    transition: all 800ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
+    transform: translate3d(0, -100%, 0);
+}
+
+.panel:target {
+    transform: translate3d(0, 0, 0);
+}
+
+/* panel content (only for animation delay after open) */
+.panel__content {
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1500px;
+    padding-top: 560px;
+    padding-right: 150px;
+    padding-bottom: 100px;
+    padding-left: 150px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 24px;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    will-change: padding-top;
+    transition: all 700ms;
+    transition-delay: 600ms;
+}
+
+.panel__content h4 {
+    font-family: 'Space Grotesk Regular';
+    font-size: 1.2rem;
+    color: #f5e272;
+    margin-bottom: 16px;
+}
+
+/* Panel content animation after open */
+.panel:target .panel__content {
+    opacity: 1;
+}
+
+.project-video {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+}
+
+.project-info-row {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.project-about, .project-details {
+    flex: 1;
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    padding: 18px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    min-width: 0;
+}
+
+.project-section {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.project-section-title {
+    font-family: 'Space Grotesk Regular', sans-serif;
+    font-size: 1.2rem;
+    color: #f5e272;
+    margin-bottom: 16px;
+}
+
+.project-section-content {
+    color: #fff;
+    background: #000;
+    border-radius: 0;
+    padding: 18px;
+}
+
+.project-top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.project-back-btn {
+    position: static;
+    margin: 0;
+    padding-bottom: 12px;
+    align-self: flex-start;
+    text-decoration: none;
+    color: #f5e272;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 2;
+    transition: color 0.2s;
+}
+
+.project-back-btn:hover {
+    color: #fff;
+}
+
+.project-video {
+    flex: 0 1 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 900px) {
+    .panel__content {
+        max-width: 98vw;
+        padding: 100px 4vw 24px 4vw;
+        padding-top: 0px;
+    }
+
+    .project-video {
+        max-width: 98vw;
+    }
+
+    .project-info-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .project-top-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .project-back-btn {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}

@@ -21,6 +21,44 @@
     <div class="loader"></div>
 </div>
 
+<div class="panel" id="project-1">
+    <div class="panel__content">
+        <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
+        <video class="project-video" controls poster="assets/images/Logo/Logo_DF_NoBackground.png" loop>
+            <source src="assets/videos/testvideo.mp4" type="video/mp4">
+            Il tuo browser non supporta il video.
+        </video>
+        <div class="project-info-row">
+            <div class="project-about">
+                <h4>About</h4>
+                <p>Breve descrizione del progetto, obiettivi e contesto.</p>
+            </div>
+            <div class="project-details">
+                <h4>Info</h4>
+                <ul style="padding-left:18px;">
+                    <li>Team: 3 persone</li>
+                    <li>Engine: Unreal Engine</li>
+                    <li>Ruolo: Gameplay Programmer</li>
+                    <li>Anno: 2024</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-title">Sistema di movimento</div>
+                Ho implementato il sistema di movimento del personaggio, con animazioni fluide e gestione degli input.
+            </div>
+        </div>
+        <div class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-title">Gestione UI</div>
+                Ho creato la UI dinamica per la selezione delle armi e la visualizzazione delle statistiche.
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg py-3 fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
@@ -99,47 +137,41 @@
         <div class="container d-flex justify-content-center">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center align-items-stretch w-100">
                 <div class="col d-flex justify-content-center">
-                    <div class="card project-card flex-fill">
-                        <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80"
-                             alt="">
+                    <div class="card project-card flex-fill" onclick="window.location.href='#project-1'"
+                         style="cursor:pointer;">
+                        <img src="assets/images/Logo/Logo_DF.png" data-gif="assets/images/gifs/testing-gif.gif"
+                             alt="Project 1" class="project-img">
                         <div class="card-content project-card">
                             <h2>Card Heading</h2>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste,
                                 voluptatum, quia explicabo laboriosam.</p>
-                            <a href="#" class="button">
-                                Find out more
-                                <span class="material-symbols-outlined">arrow_right_alt</span>
-                            </a>
+                            <a href="#project-1" class="button">Find out more<span class="material-symbols-outlined">arrow_right_alt</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <div class="card project-card flex-fill">
-                        <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80"
-                             alt="">
+                    <div class="card project-card flex-fill" onclick="window.location.href='#project-1'"
+                         style="cursor:pointer;">
+                        <img src="assets/images/Logo/Logo_DF.png" data-gif="assets/images/gifs/testing-gif.gif"
+                             alt="Project 1" class="project-img">
                         <div class="card-content project-card">
                             <h2>Card Heading</h2>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste,
                                 voluptatum, quia explicabo laboriosam.</p>
-                            <a href="#" class="button">
-                                Find out more
-                                <span class="material-symbols-outlined">arrow_right_alt</span>
-                            </a>
+                            <a href="#project-1" class="button">Find out more<span class="material-symbols-outlined">arrow_right_alt</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <div class="card project-card flex-fill">
-                        <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80"
-                             alt="">
+                    <div class="card project-card flex-fill" onclick="window.location.href='#project-1'"
+                         style="cursor:pointer;">
+                        <img src="assets/images/Logo/Logo_DF.png" data-gif="assets/images/gifs/testing-gif.gif"
+                             alt="Project 1" class="project-img">
                         <div class="card-content project-card">
                             <h2>Card Heading</h2>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste,
                                 voluptatum, quia explicabo laboriosam.</p>
-                            <a href="#" class="button">
-                                Find out more
-                                <span class="material-symbols-outlined">arrow_right_alt</span>
-                            </a>
+                            <a href="#project-1" class="button">Find out more<span class="material-symbols-outlined">arrow_right_alt</span></a>
                         </div>
                     </div>
                 </div>
@@ -151,95 +183,114 @@
     <div class="section">
         <div class="container d-flex justify-content-center align-items-center">
             <div class="row w-100 justify-content-center">
-                <div class="card skill-card m-3" style="width: 18rem;">
-                    <div class="face face1">
-                        <div class="content text-center">
-                            <img src="assets/images/Logo/Unreal-Logo.png">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card skill-card m-3" style="width: 18rem;">
+                        <div class="face face1">
+                            <div class="content text-center">
+                                <img src="assets/images/Logo/Unity-Logo.png">
+                            </div>
                         </div>
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Unreal Engine developer with deep knowledge of the engine’s full pipeline, from
-                                programming and Blueprints to FX, AI, and optimization.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card skill-card m-3" style="width: 18rem;">
-                    <div class="face face1">
-                        <div class="content text-center">
-                            <img src="assets/images/Logo/Unity-Logo.png">
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Experienced Unity developer proficient in C#, with a strong grasp of gameplay systems,
-                                shaders, UI Toolkit, visual effects, and overall project optimization.</p>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Experienced Unity developer proficient in C#, with a strong grasp of gameplay
+                                    systems,
+                                    shaders, UI Toolkit, visual effects, and overall project optimization.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card skill-card m-3" style="width: 18rem;">
-                    <div class="face face1">
-                        <div class="content text-center">
-                            <img src="assets/images/Logo/OOP-Logo.png">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card skill-card m-3" style="width: 18rem;">
+                        <div class="face face1">
+                            <div class="content text-center">
+                                <img src="assets/images/Logo/Unreal-Logo.png">
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Unreal Engine developer with deep knowledge of the engine’s full pipeline, from
+                                    programming and Blueprints to FX, AI, and optimization.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Passionate about Object-Oriented Programming, my core focus in software development. I
-                                design clean, modular, and extensible architectures with strong principles and reusable
-                                systems.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card skill-card m-3" style="width: 18rem;">
+                        <div class="face face1">
+                            <div class="content text-center">
+                                <img src="assets/images/Logo/OOP-Logo.png">
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Passionate about Object-Oriented Programming, my core focus in software development.
+                                    I
+                                    design clean, modular, and extensible architectures with strong principles and
+                                    reusable
+                                    systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card skill-card m-3" style="width: 18rem;">
+                        <div class="face face1">
+                            <div class="content text-center">
+                                <img src="assets/images/Logo/c-plus-plus-logo.png">
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Proficient in modern C++, with a strong focus on performance, memory management, and
+                                    clean, modular code.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card skill-card m-3" style="width: 18rem;">
+                        <div class="face face1">
+                            <div class="content text-center">
+                                <img src="assets/images/Logo/c-sharp-logo.png">
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Experienced in C# and the .NET ecosystem, with a focus on building robust and
+                                    efficient
+                                    console applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card skill-card m-3" style="width: 18rem;">
+                        <div class="face face1">
+                            <div class="content text-center">
+                                <img src="assets/images/Logo/git-logo.png">
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Confident with Git version control and experienced in using Git Flow for structured,
+                                    team-oriented development. Skilled in branching strategies, conflict resolution, and
+                                    repository management.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container d-flex justify-content-center align-items-center">
-            <div class="row w-100 justify-content-center">
-                <div class="card skill-card m-3" style="width: 18rem;">
-                    <div class="face face1">
-                        <div class="content text-center">
-                            <img src="assets/images/Logo/c-plus-plus-logo.png">
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Proficient in modern C++, with a strong focus on performance, memory management, and
-                                clean, modular code.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card skill-card m-3" style="width: 18rem;">
-                    <div class="face face1">
-                        <div class="content text-center">
-                            <img src="assets/images/Logo/c-sharp-logo.png">
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Experienced in C# and the .NET ecosystem, with a focus on building robust and efficient
-                                console applications.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card skill-card m-3" style="width: 18rem;">
-                    <div class="face face1">
-                        <div class="content text-center">
-                            <img src="assets/images/Logo/git-logo.png">
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>Confident with Git version control and experienced in using Git Flow for structured,
-                                team-oriented development. Skilled in branching strategies, conflict resolution, and
-                                repository management.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
+
+<footer class="site-footer" id="site-footer">
+    <div class="footer-content">
+        <span>© 2025 Denis Faraci &mdash; All rights reserved</span>
+        <span class="footer-mail">voydergames@gmail.com</span>
+    </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
@@ -265,6 +316,7 @@
                     const aboutLink = document.getElementById('about-link');
                     const worksLink = document.getElementById('works-link');
                     const skillsLink = document.getElementById('skills-link');
+                    const footer = document.getElementById('site-footer');
 
                     aboutLink.blur();
                     worksLink.blur();
@@ -278,15 +330,18 @@
                     worksLink.classList.add('inactive');
                     skillsLink.classList.add('inactive');
 
-                    switch (destination.anchor) {
-                        case 'About':
+                    switch (destination.index) {
+                        case 0:
                             aboutLink.classList.add('active');
+                            footer.classList.remove('visible');
                             break;
-                        case 'Works':
+                        case 1:
                             worksLink.classList.add('active');
+                            footer.classList.remove('visible');
                             break;
-                        case 'Skills':
+                        case 2:
                             skillsLink.classList.add('active');
+                            footer.classList.add('visible');
                             break;
                     }
                 }
@@ -317,6 +372,7 @@
         });
 
         let fullpage = createFullPage();
+        window.fullpage_api = fullpage;
         fullpage.setAllowScrolling(false);
         setTimeout(() => {
             const loaderBg = document.getElementById('loader-bg');
@@ -331,6 +387,35 @@
                 fullpage.setAllowScrolling(true);
             }
         }, 500);
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            const img = card.querySelector('.project-img');
+            if (!img) return;
+            card.addEventListener('mouseenter', () => {
+                img.dataset.static = img.src;
+                img.src = img.dataset.gif;
+            });
+            card.addEventListener('mouseleave', () => {
+                img.src = img.dataset.static;
+            });
+        });
+    });
+
+    window.addEventListener('hashchange', function () {
+        if (location.hash.startsWith('#project-')) {
+            var panelId = location.hash.substring(1);
+            var panel = document.getElementById(panelId);
+            if (panel) {
+                var video = panel.querySelector('.project-video');
+                if (video) {
+                    video.currentTime = 0;
+                    video.play();
+                }
+            }
+            if (window.fullpage_api) window.fullpage_api.setAllowScrolling(false);
+        } else {
+            if (window.fullpage_api) window.fullpage_api.setAllowScrolling(true);
+        }
     });
 </script>
 </BODY>
