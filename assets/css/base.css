@@ -76,6 +76,12 @@ nav {
     --bs-navbar-hover-color: #f5e272 !important;
 }
 
+.navbar .nav-link.active,
+.navbar .nav-link.active:focus,
+.navbar .nav-link.active:hover {
+    color: #fff !important;
+}
+
 .navbar-links-box {
     position: absolute;
     right: 0;
