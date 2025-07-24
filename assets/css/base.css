@@ -144,7 +144,7 @@ nav {
     z-index: 1000;
     transform: translateY(100%);
     opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.19,1,0.56,1), opacity 0.5s cubic-bezier(0.19,1,0.56,1);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.56, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.56, 1);
 }
 
 .site-footer.visible {
@@ -191,16 +191,15 @@ nav {
 
 /* Common panel style */
 .panel {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: auto;
+    overflow: scroll;
     z-index: 999;
     color: #000;
     box-sizing: border-box;
@@ -216,21 +215,15 @@ nav {
 /* panel content (only for animation delay after open) */
 .panel__content {
     font-family: 'Montserrat';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     width: 100%;
-    max-width: 1500px;
-    padding-top: 560px;
-    padding-right: 150px;
-    padding-bottom: 100px;
-    padding-left: 150px;
+    max-width: 1150px;
+    margin: 48px auto;
+    margin-top: 70px;
+    padding: 32px 16px;
     background: rgba(0, 0, 0, 0.85);
     border-radius: 24px;
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    will-change: padding-top;
     transition: all 700ms;
     transition-delay: 600ms;
 }
@@ -240,6 +233,52 @@ nav {
     font-size: 1.2rem;
     color: #f5e272;
     margin-bottom: 16px;
+}
+
+.project-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-section-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.project-section-content ul li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.project-section-content ul li::before {
+    font-family: 'Material Symbols Outlined';
+    content: 'arrow_right_alt';
+    font-size: 1.2em;
+    margin-right: 8px;
+    color: #f5e272;
+    vertical-align: middle;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.panel__content ul li {
+    display: flex;
+    align-items: center;
+}
+
+.panel__content li {
+    margin-bottom: 8px;
+}
+
+.panel__content ul li .material-symbols-outlined {
+    margin-right: 8px;
+    vertical-align: middle;
+    font-size: 1.3em;
+}
+
+.panel__content span {
+    padding-right: 2.0rem;
 }
 
 /* Panel content animation after open */
@@ -302,8 +341,6 @@ nav {
 
 .project-back-btn {
     position: static;
-    margin: 0;
-    padding-bottom: 12px;
     align-self: flex-start;
     text-decoration: none;
     color: #f5e272;
@@ -318,7 +355,7 @@ nav {
 }
 
 .project-video {
-    flex: 0 1 640px;
+    margin-top: 12px;
     margin-left: auto;
     margin-right: auto;
 }

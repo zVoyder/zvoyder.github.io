@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <HTML lang="en">
 <HEAD>
     <meta charset="utf-8">
@@ -17,47 +17,11 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </HEAD>
 <BODY>
+
+<!-- Loader -->
 <div class="loader-bg" id="loader-bg">
     <div class="loader"></div>
 </div>
-
-<div class="panel" id="project-1">
-    <div class="panel__content">
-        <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
-        <video class="project-video" controls poster="assets/images/Logo/Logo_DF_NoBackground.png" loop>
-            <source src="assets/videos/testvideo.mp4" type="video/mp4">
-            Il tuo browser non supporta il video.
-        </video>
-        <div class="project-info-row">
-            <div class="project-about">
-                <h4>About</h4>
-                <p>Breve descrizione del progetto, obiettivi e contesto.</p>
-            </div>
-            <div class="project-details">
-                <h4>Info</h4>
-                <ul style="padding-left:18px;">
-                    <li>Team: 3 persone</li>
-                    <li>Engine: Unreal Engine</li>
-                    <li>Ruolo: Gameplay Programmer</li>
-                    <li>Anno: 2024</li>
-                </ul>
-            </div>
-        </div>
-        <div class="project-section">
-            <div class="project-section-content">
-                <div class="project-section-title">Sistema di movimento</div>
-                Ho implementato il sistema di movimento del personaggio, con animazioni fluide e gestione degli input.
-            </div>
-        </div>
-        <div class="project-section">
-            <div class="project-section-content">
-                <div class="project-section-title">Gestione UI</div>
-                Ho creato la UI dinamica per la selezione delle armi e la visualizzazione delle statistiche.
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg py-3 fixed-top" data-bs-theme="dark">
@@ -112,6 +76,163 @@
     </div>
 </nav>
 
+<!-- Project Panels -->
+<div class="panel" id="project-1">
+    <div class="panel__content">
+        <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
+        <video class="project-video" controls poster="assets/images/Logo/Logo_DF_NoBackground.png" loop>
+            <source src="assets/videos/TNE-Vid.mp4" type="video/mp4">
+        </video>
+        <div class="project-info-row">
+            <div class="project-about">
+                <h4>About</h4>
+                <p>For The Negative Edge, I developed a wide range of modular systems, with a strong focus on RPG
+                    systems, including stats management, inventory, and equipment handling, as well as a fully
+                    customizable dismemberment system and a responsive weapon system. I also worked extensively
+                    on the UI and overall project architecture, ensuring scalability and reusability across systems.
+
+                    Throughout the project, I expanded my personal development framework, refining existing modules and
+                    integrating new features to support complex gameplay mechanics.</p>
+            </div>
+            <div class="project-details">
+                <h4>Info</h4>
+                <ul>
+                    <li><span class="material-symbols-outlined">badge</span>Gameplay Programmer</li>
+                    <li><span class="material-symbols-outlined">groups</span>8</li>
+                    <li><span class="material-symbols-outlined">manufacturing</span>Unreal Engine 5.5</li>
+                    <li><span class="material-symbols-outlined">schedule</span>In Development</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-title">RPG Systems – Stats, Inventory, Equipment</div>
+                I designed and developed a fully modular RPG system supporting complex mechanics such as stat-based
+                progression, equipment management, inventory handling, and procedural item generation. The system was
+                built as a reusable Unreal Engine plugin, with full support for both Blueprint and C++ workflows.
+                <br><br>
+                Key features include:
+                <ul>
+                    <li>Flexible stat system with core and special stats, dynamic modifiers, and stat operations.</li>
+                    <li>Robust inventory system with stackable items, equipment slots, and rarity/stat-based item
+                        logic.
+                    </li>
+                    <li>Procedural item and gear generation, allowing the creation of randomized equipment with stats
+                        and rarity tiers.
+                    </li>
+                    <li>Seamless integration with UI, including item comparison, stat visualization, and equipment
+                        feedback.
+                    </li>
+                    <li>Designed for extensibility and performance, with clean architecture and subsystem-based logic to
+                        support complex RPG mechanics.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-title">Weapon System – Firearms, Melee, Throwable Weapons</div>
+                I developed a fully modular Weapon System designed to support a wide range of weapon types, including
+                firearms, melee weapons, and throwables. The system was built as a reusable plugin for Unreal Engine,
+                optimized for both Blueprint and C++ workflows.
+                <br><br>
+                Key features include:
+                <ul>
+                    <li>A flexible firearm framework with shooting logic, multiple fire modes, recoil, spread, cooldown,
+                        and support for both hitscan and projectile behaviors.
+                    </li>
+                    <li>A melee combat system featuring combo chains, buffered inputs, defense actions, and
+                        customizable attack animation montages with hit detection via notifies.
+                    </li>
+                    <li>A throwable system with modular handling of cooldowns, throw logic, and projectile spawning for
+                        grenades and similar weapons.
+                    </li>
+                    <li>A dynamic crosshair component adaptable to different weapon types and responsive to gameplay
+                        states.
+                    </li>
+                    <li>Support for custom handler logic, animation management, and extendable behaviors for complete
+                        control over weapon functionality.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-title">Dismemberment System – Modular Limb Detachment & Blood FX</div>
+                I designed and implemented a modular Dismemberment System for Unreal Engine, enabling real-time limb
+                detachment, blood effects, and decals with full support for Blueprint and C++ workflows.
+                <br><br>
+                Key features include:
+                <ul>
+                    <li>Runtime skeletal mesh dismemberment with support for individual limb detachment.</li>
+                    <li>Integrated blood decals and Niagara particle effects for visual feedback.</li>
+                    <li>Customizable data-driven setup using Data Assets for skeletal configuration and blood types.
+                    </li>
+                    <li>Support for detached limb management, pooling, and performance optimization.</li>
+                    <li>Built for extensibility, allowing easy overrides for advanced behaviors and integration into
+                        complex characters or combat systems.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel" id="project-3">
+    <div class="panel__content">
+        <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
+        <video class="project-video" controls poster="assets/images/Logo/Logo_DF_NoBackground.png" loop>
+            <source src="assets/videos/Self-Vid.mp4" type="video/mp4">
+        </video>
+        <div class="project-info-row">
+            <div class="project-about">
+                <h4>About</h4>
+                <p>As the sole programmer, I developed the game's core systems, including AI, 3C (Character, Camera,
+                    Controls), UI, and inventory. I also created a custom input recording and playback system, allowing
+                    the game to capture every player action and replay it through a “ghost” character — a key mechanic
+                    driving the horror loop at the heart of Self.</p>
+            </div>
+            <div class="project-details">
+                <h4>Info</h4>
+                <ul>
+                    <li><span class="material-symbols-outlined">badge</span>Generalist/Gameplay Programmer</li>
+                    <li><span class="material-symbols-outlined">groups</span>5</li>
+                    <li><span class="material-symbols-outlined">manufacturing</span>Unreal Engine 5.4</li>
+                    <li><span class="material-symbols-outlined">schedule</span>2 Weeks</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-title">Input Register System – Recording & Playback Framework</div>
+                The Input Register System is a custom-built solution designed to record and replay any type of player
+                input, enabling gameplay mechanics based on time loops and self-interaction.
+                <br><br>
+                Key features include:
+                <ul>
+                    <li>Captures all relevant inputs (movement, actions, camera, interactions, etc.) over time, with
+                        precise frame-by-frame data synchronization.
+                    </li>
+                    <li>Reproduces the recorded inputs through a "ghost" actor, which mimics the player’s exact actions,
+                        creating the illusion of interacting with a past version of yourself.
+                    </li>
+                    <li>The ghost playback can be triggered via in-game events (e.g., entering a volume or completing an
+                        objective).
+                    </li>
+                    <li>Once playback starts, the ghost actor is spawned, follows the recorded sequence, and is
+                        automatically despawned when the playback ends.
+                    </li>
+                    <li>Designed to be modular and easy to extend for more complex behaviors or multiplayer sync in
+                        future iterations.
+                    </li>
+                </ul>
+                This system was central to the core mechanic of Self, turning the player’s past actions into a tangible
+                threat, forcing them to outsmart their own recorded behavior in order to progress.
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="fullPage">
     <!-- Intro Section -->
     <div class="section">
@@ -139,13 +260,15 @@
                 <div class="col d-flex justify-content-center">
                     <div class="card project-card flex-fill" onclick="window.location.href='#project-1'"
                          style="cursor:pointer;">
-                        <img src="assets/images/Logo/Logo_DF.png" data-gif="assets/images/gifs/testing-gif.gif"
+                        <img src="assets/images/Projects/TNE-Cover.jpg" data-gif="assets/images/gifs/TNE.gif"
                              alt="Project 1" class="project-img">
                         <div class="card-content project-card">
-                            <h2>Card Heading</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste,
-                                voluptatum, quia explicabo laboriosam.</p>
-                            <a href="#project-1" class="button">Find out more<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                            <h2>THE NEGATIVE EDGE</h2>
+                            <p>The Negative Edge is a fast-paced third-person arena shooter where you battle through
+                                dystopian arenas, combining brutal action with RPG progression and strategic inventory
+                                management.</p>
+                            <a href="#project-1" class="button fnd-out">Find out more<span
+                                    class="material-symbols-outlined">arrow_right_alt</span></a>
                         </div>
                     </div>
                 </div>
@@ -163,15 +286,17 @@
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <div class="card project-card flex-fill" onclick="window.location.href='#project-1'"
+                    <div class="card project-card flex-fill" onclick="window.location.href='#project-3'"
                          style="cursor:pointer;">
-                        <img src="assets/images/Logo/Logo_DF.png" data-gif="assets/images/gifs/testing-gif.gif"
-                             alt="Project 1" class="project-img">
+                        <img src="assets/images/Projects/Self-Cover.png" data-gif="assets/images/gifs/Self.gif"
+                             alt="Project 3" class="project-img">
                         <div class="card-content project-card">
-                            <h2>Card Heading</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste,
-                                voluptatum, quia explicabo laboriosam.</p>
-                            <a href="#project-1" class="button">Find out more<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                            <h2>Self</h2>
+                            <p>Self is a psychological horror game in which the protagonist is trapped in a mysterious,
+                                unsettling experience, relentlessly pursued by an unseen entity bent on thwarting his
+                                every move.</p>
+                            <a href="#project-1" class="button fnd-out">Find out more<span
+                                    class="material-symbols-outlined">arrow_right_alt</span></a>
                         </div>
                     </div>
                 </div>
@@ -281,7 +406,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -299,61 +423,9 @@
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.js"
         crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/elements.js"></script>
 <script>
-    function createFullPage() {
-        let page = new fullpage('#fullPage', {
-            licenseKey: 'YOUR_KEY_HERE',
-            anchors: ['About', 'Works', 'Skills'],
-            navigationTooltips: ['About', 'Works', 'Skills'],
-            showActiveTooltip: false,
-            navigation: true,
-            navigationPosition: 'right',
-            sectionSelector: '.section',
-            scrollOverflow: true,
-            responsiveWidth: 900,
-            afterLoad:
-                function (origin, destination, direction) {
-                    const aboutLink = document.getElementById('about-link');
-                    const worksLink = document.getElementById('works-link');
-                    const skillsLink = document.getElementById('skills-link');
-                    const footer = document.getElementById('site-footer');
-
-                    aboutLink.blur();
-                    worksLink.blur();
-                    skillsLink.blur();
-
-                    aboutLink.classList.remove('active');
-                    worksLink.classList.remove('active');
-                    skillsLink.classList.remove('active');
-
-                    aboutLink.classList.add('inactive');
-                    worksLink.classList.add('inactive');
-                    skillsLink.classList.add('inactive');
-
-                    switch (destination.index) {
-                        case 0:
-                            aboutLink.classList.add('active');
-                            footer.classList.remove('visible');
-                            break;
-                        case 1:
-                            worksLink.classList.add('active');
-                            footer.classList.remove('visible');
-                            break;
-                        case 2:
-                            skillsLink.classList.add('active');
-                            footer.classList.add('visible');
-                            break;
-                    }
-                }
-        });
-
-        const watermark = document.querySelector('.fp-watermark');
-        if (watermark)
-            watermark.remove();
-
-        return page;
-    }
-
     document.addEventListener("DOMContentLoaded", function () {
         VANTA.NET({
             el: "#vanta-bg",
@@ -374,49 +446,15 @@
         let fullpage = createFullPage();
         window.fullpage_api = fullpage;
         fullpage.setAllowScrolling(false);
-        setTimeout(() => {
-            const loaderBg = document.getElementById('loader-bg');
-            if (loaderBg) {
-                loaderBg.style.transition = 'opacity 0.25s ease';
-                loaderBg.style.opacity = '0';
-                setTimeout(() => {
-                    loaderBg.remove();
-                    fullpage.setAllowScrolling(true);
-                }, 250);
-            } else {
-                fullpage.setAllowScrolling(true);
-            }
-        }, 500);
 
-        document.querySelectorAll('.project-card').forEach(card => {
-            const img = card.querySelector('.project-img');
-            if (!img) return;
-            card.addEventListener('mouseenter', () => {
-                img.dataset.static = img.src;
-                img.src = img.dataset.gif;
-            });
-            card.addEventListener('mouseleave', () => {
-                img.src = img.dataset.static;
-            });
+        startLoadingBackground(() => {
+            fullpage.setAllowScrolling(true);
         });
+
+        setupProjectCardHover();
     });
 
-    window.addEventListener('hashchange', function () {
-        if (location.hash.startsWith('#project-')) {
-            var panelId = location.hash.substring(1);
-            var panel = document.getElementById(panelId);
-            if (panel) {
-                var video = panel.querySelector('.project-video');
-                if (video) {
-                    video.currentTime = 0;
-                    video.play();
-                }
-            }
-            if (window.fullpage_api) window.fullpage_api.setAllowScrolling(false);
-        } else {
-            if (window.fullpage_api) window.fullpage_api.setAllowScrolling(true);
-        }
-    });
+    setupPanelVideoAutoplay();
 </script>
 </BODY>
 </HTML>
