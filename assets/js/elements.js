@@ -20,17 +20,34 @@ function setupPanelVideoAutoplay() {
             if (panel) {
                 var video = panel.querySelector('.project-video');
                 if (video) {
-                    video.currentTime = 0;
-                    video.play();
+                    if (video.tagName === 'VIDEO') {
+                        video.currentTime = 0;
+                        video.play();
+                    } else if (video.tagName === 'IFRAME') {
+                        let src = video.src;
+                        if (!src.includes('autoplay=1')) {
+                            src += (src.includes('?') ? '&' : '?') + 'autoplay=1';
+                        }
+                        video.src = src;
+                    }
                 }
             }
             if (window.fullpage_api)
                 window.fullpage_api.setAllowScrolling(false);
         } else {
+
             var videos = document.querySelectorAll('.panel .project-video');
             videos.forEach(video => {
-                video.pause();
-                video.currentTime = 0;
+                if (video.tagName === 'VIDEO') {
+                    video.pause();
+                    video.currentTime = 0;
+                } else if (video.tagName === 'IFRAME') {
+                    let src = video.src;
+                    video.src = '';
+                    setTimeout(() => {
+                        video.src = src.replace(/([&?])autoplay=1(&)?/, '$1').replace(/([&?])$/, '');
+                    }, 100);
+                }
             });
             if (window.fullpage_api)
                 window.fullpage_api.setAllowScrolling(true);
@@ -54,4 +71,13 @@ function startLoadingBackground(onComplete) {
                 onComplete();
         }
     }, 500);
+}
+
+function setupBurgerMenu() {
+    document.querySelectorAll('.menu__item, .navbar-brand').forEach(item => {
+        item.addEventListener('click', () => {
+            const toggle = document.getElementById('menu__toggle');
+            if (toggle) toggle.checked = false;
+        });
+    });
 }

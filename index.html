@@ -23,12 +23,25 @@
     <div class="loader"></div>
 </div>
 
+<!-- Burger Menu -->
+<div class="burger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+
+    <ul class="menu__box">
+        <li><a class="menu__item" href="#About">About</a></li>
+        <li><a class="menu__item" href="#Works">Works</a></li>
+        <li><a class="menu__item" href="#Skills">Skills</a></li>
+    </ul>
+</div>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg py-3 fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
         <div class="d-flex w-100 align-items-center" style="position:relative; min-height:32px;">
-            <a class="navbar-brand d-flex align-items-center" href="#"
-               style="position:absolute;left:0;top:50%;transform:translateY(-50%);">
+            <a class="navbar-brand d-flex align-items-center" href="#About" style="position:absolute;left:0;top:50%;transform:translateY(-50%);">
                 <img src="assets/images/Logo/Logo_DF_NoBackground.png" alt="Logo" width="48" height="48"
                      class="d-inline-block align-text-top">
                 <span class="ms-2">Denis Faraci</span>
@@ -65,13 +78,6 @@
                          height="32">
                 </a>
             </div>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation"
-                    style="position:absolute;right:0;top:50%;transform:translateY(-50%);background:none;border:none;padding:0;">
-                <img src="assets/images/Icons/3lines.png" alt="Menu" class="expand-nav-button-icon" width="32"
-                     height="32">
-            </button>
         </div>
     </div>
 </nav>
@@ -80,9 +86,7 @@
 <div class="panel" id="project-1">
     <div class="panel__content">
         <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
-        <video class="project-video" controls poster="assets/images/Logo/Logo_DF_NoBackground.png" loop>
-            <source src="assets/videos/TNE-Vid.mp4" type="video/mp4">
-        </video>
+        <iframe class="project-video" src="https://drive.google.com/file/d/1lNl87vnOj-FeMISEw6C1Woj46iZ9Kdbw/preview" allow="autoplay"></iframe>
         <div class="project-info-row">
             <div class="project-about">
                 <h4>About</h4>
@@ -181,9 +185,7 @@
 <div class="panel" id="project-3">
     <div class="panel__content">
         <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
-        <video class="project-video" controls poster="assets/images/Logo/Logo_DF_NoBackground.png" loop>
-            <source src="assets/videos/Self-Vid.mp4" type="video/mp4">
-        </video>
+        <iframe class="project-video" src="https://drive.google.com/file/d/1X3yTkMBV0Vm6y1JgvTlhxYlI2nuKqnjV/preview" allow="autoplay"></iframe>
         <div class="project-info-row">
             <div class="project-about">
                 <h4>About</h4>
@@ -233,6 +235,7 @@
     </div>
 </div>
 
+<!-- Full Page Content -->
 <div id="fullPage">
     <!-- Intro Section -->
     <div class="section">
@@ -409,6 +412,7 @@
     </div>
 </div>
 
+<!-- Footer -->
 <footer class="site-footer" id="site-footer">
     <div class="footer-content">
         <span>© 2025 Denis Faraci &mdash; All rights reserved</span>
@@ -454,6 +458,7 @@
         setupProjectCardHover();
     });
 
+    setupBurgerMenu();
     setupPanelVideoAutoplay();
 </script>
 </BODY>

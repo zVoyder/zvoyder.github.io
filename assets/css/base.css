@@ -288,7 +288,7 @@ nav {
 
 .project-video {
     width: 100%;
-    height: auto;
+    height: 610px;
     border-radius: 0;
     margin-bottom: 32px;
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
@@ -348,6 +348,7 @@ nav {
     font-weight: bold;
     z-index: 2;
     transition: color 0.2s;
+    margin-left: 14px;
 }
 
 .project-back-btn:hover {
@@ -361,6 +362,14 @@ nav {
 }
 
 @media (max-width: 900px) {
+    body {
+        margin-bottom: 150px !important;
+    }
+    
+    .section{
+        margin-bottom: 150px !important;
+    }
+    
     .panel__content {
         max-width: 98vw;
         padding: 100px 4vw 24px 4vw;
@@ -385,5 +394,9 @@ nav {
     .project-back-btn {
         font-size: 1rem;
         padding: 8px 12px;
+    }
+    
+    .d-flex.navbar-links-box {
+        display: none !important;
     }
 }
