@@ -271,13 +271,12 @@ nav {
     margin-bottom: 8px;
 }
 
-.panel__content ul li .material-symbols-outlined {
+.panel__content ul li {
     margin-right: 8px;
     vertical-align: middle;
-    font-size: 1.3em;
 }
 
-.panel__content span {
+.project-details span {
     padding-right: 2.0rem;
 }
 
@@ -361,11 +360,13 @@ nav {
     margin-right: auto;
 }
 
-.all-works-link {
+/* Links Styles */
+
+.default-page-link {
     font-family: 'Montserrat', sans-serif;
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: #f5e272;
     font-size: 18px;
     transition: color 0.2s;
     
@@ -373,12 +374,15 @@ nav {
     {
         overflow: hidden;
         font-size: 24px;
-        vertical-align: middle;
     }
 }
 
-.all-works-link:hover {
-    color: #f5e272;
+.material-symbols-outlined {
+    vertical-align: text-top;
+}
+
+.default-page-link:hover {
+    color: #fff;
 }
 
 @media (max-width: 900px) {

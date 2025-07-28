@@ -13,6 +13,8 @@
 }
 
 function setupPanelVideoAutoplay() {
+    stopAllVideos();
+
     window.addEventListener('hashchange', function () {
         if (location.hash.startsWith('#project-')) {
             var panelId = location.hash.substring(1);
@@ -32,24 +34,24 @@ function setupPanelVideoAutoplay() {
                     }
                 }
             }
-            if (window.fullpage_api)
-                window.fullpage_api.setAllowScrolling(false);
         } else {
-            var videos = document.querySelectorAll('.panel .project-video');
-            videos.forEach(video => {
-                if (video.tagName === 'VIDEO') {
-                    video.pause();
-                    video.currentTime = 0;
-                } else if (video.tagName === 'IFRAME') {
-                    let src = video.src;
-                    video.src = '';
-                    setTimeout(() => {
-                        video.src = src.replace(/([&?])autoplay=1(&)?/, '$1').replace(/([&?])$/, '');
-                    }, 100);
-                }
-            });
-            if (window.fullpage_api)
-                window.fullpage_api.setAllowScrolling(true);
+            stopAllVideos();
+        }
+    });
+}
+
+function stopAllVideos() {
+    var videos = document.querySelectorAll('.panel .project-video');
+    videos.forEach(video => {
+        if (video.tagName === 'VIDEO') {
+            video.pause();
+            video.currentTime = 0;
+        } else if (video.tagName === 'IFRAME') {
+            let src = video.src;
+            video.src = '';
+            setTimeout(() => {
+                video.src = src.replace(/([&?])autoplay=1(&)?/, '$1').replace(/([&?])$/, '');
+            }, 100);
         }
     });
 }

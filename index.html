@@ -104,7 +104,8 @@
 <div class="panel" id="project-1">
     <div class="panel__content">
         <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
-        <iframe class="project-video" src="https://www.youtube.com/embed/yvKbqzjRhRY?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="project-video" src="https://www.youtube.com/embed/yvKbqzjRhRY?autoplay=1&rel=0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <div class="project-info-row">
             <div class="project-about">
                 <h4>About</h4>
@@ -203,7 +204,8 @@
 <div class="panel" id="project-3">
     <div class="panel__content">
         <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
-        <iframe class="project-video" src="https://www.youtube.com/embed/VtV8eRi2Qdg?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="project-video" src="https://www.youtube.com/embed/VtV8eRi2Qdg?autoplay=1&rel=0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <div class="project-info-row">
             <div class="project-about">
                 <h4>About</h4>
@@ -325,7 +327,7 @@
         </div>
 
         <div class="container d-flex justify-content-center mt-5">
-            <a href="works.html" class="button all-works-link">View All Projects<span class="material-symbols-outlined">arrow_right_alt</span></a>
+            <a href="works.html" class="button default-page-link">View All Projects<span class="material-symbols-outlined">arrow_right_alt</span></a>
         </div>
     </div>
 
@@ -473,6 +475,12 @@
         window.fullpage_api = fullpage;
         fullpage.setAllowScrolling(false);
 
+        window.addEventListener('hashchange', function () {
+            if (location.hash.startsWith('#project-')) {
+                fullpage.setAllowScrolling(false);
+            }
+        });
+
         startLoadingBackground(() => {
             fullpage.setAllowScrolling(true);
         });
@@ -480,8 +488,8 @@
         setupProjectCardHover();
     });
 
-    setupBurgerMenu();
     setupPanelVideoAutoplay();
+    setupBurgerMenu();
 </script>
 </BODY>
 </HTML>
