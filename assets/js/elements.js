@@ -35,7 +35,6 @@ function setupPanelVideoAutoplay() {
             if (window.fullpage_api)
                 window.fullpage_api.setAllowScrolling(false);
         } else {
-
             var videos = document.querySelectorAll('.panel .project-video');
             videos.forEach(video => {
                 if (video.tagName === 'VIDEO') {

@@ -361,6 +361,26 @@ nav {
     margin-right: auto;
 }
 
+.all-works-link {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.2s;
+    
+    .material-symbols-outlined
+    {
+        overflow: hidden;
+        font-size: 24px;
+        vertical-align: middle;
+    }
+}
+
+.all-works-link:hover {
+    color: #f5e272;
+}
+
 @media (max-width: 900px) {
     body {
         margin-bottom: 150px !important;

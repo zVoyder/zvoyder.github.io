@@ -22,11 +22,39 @@
     <div class="loader"></div>
 </div>
 
+<!-- Burger Menu -->
+<div class="burger-menu">
+    <input id="menu__toggle" type="checkbox"/>
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+
+    <ul class="menu__box">
+        <li><a class="menu__item" href="index.html#About">About</a></li>
+        <li><a class="menu__item" href="index.html#Works">Works</a></li>
+        <li><a class="menu__item" href="index.html#Skills">Skills</a></li>
+        <li>
+            <a class="menu__item" href="https://zvoyder.itch.io/" target="_blank">
+                <img src="assets/images/Logo/itch-logo.png" alt="Itch" class="navbar-logo-link" width="32" height="32">
+            </a>
+            <a class="menu__item" href="https://www.linkedin.com/in/denis-faraci-a66368285/" target="_blank">
+                <img src="assets/images/Logo/linkedin-app-white-icon.png" alt="LinkedIn" class="navbar-logo-link" width="32" height="32">
+            </a>
+            <a class="menu__item" href="https://github.com/zVoyder" target="_blank">
+                <img src="assets/images/Logo/github-white-icon.png" alt="GitHub" class="navbar-logo-link" width="32" height="32">
+            </a>
+            <a class="menu__item" href="https://steamcommunity.com/id/zVoider/myworkshopfiles/" target="_blank">
+                <img src="assets/images/Logo/steam_logo.png" alt="Steam" class="navbar-logo-link" width="32" height="32">
+            </a>
+        </li>
+    </ul>
+</div>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg py-3 fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
         <div class="d-flex w-100 align-items-center" style="position:relative; min-height:32px;">
-            <a class="navbar-brand d-flex align-items-center" href="#"
+            <a class="navbar-brand d-flex align-items-center" href="index.html#About"
                style="position:absolute;left:0;top:50%;transform:translateY(-50%);">
                 <img src="assets/images/Logo/Logo_DF_NoBackground.png" alt="Logo" width="48" height="48"
                      class="d-inline-block align-text-top">
@@ -64,13 +92,6 @@
                          height="32">
                 </a>
             </div>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation"
-                    style="position:absolute;right:0;top:50%;transform:translateY(-50%);background:none;border:none;padding:0;">
-                <img src="assets/images/Icons/3lines.png" alt="Menu" class="expand-nav-button-icon" width="32"
-                     height="32">
-            </button>
         </div>
     </div>
 </nav>
@@ -79,35 +100,98 @@
 <div class="panel" id="project-1">
     <div class="panel__content">
         <a href="#Works" class="project-back-btn"><span class="material-symbols-outlined">arrow_left_alt</span> Go Back</a>
-        <video class="project-video" controls poster="assets/images/Logo/Logo_DF_NoBackground.png" loop>
-            <source src="assets/videos/testvideo.mp4" type="video/mp4">
-            Il tuo browser non supporta il video.
-        </video>
+        <iframe class="project-video" src="https://www.youtube.com/embed/yvKbqzjRhRY?autoplay=1&rel=0"
+                allow="encrypted-media" allowfullscreen></iframe>
         <div class="project-info-row">
             <div class="project-about">
                 <h4>About</h4>
-                <p>Breve descrizione del progetto, obiettivi e contesto.</p>
+                <p>For The Negative Edge, I developed a wide range of modular systems, with a strong focus on RPG
+                    systems, including stats management, inventory, and equipment handling, as well as a fully
+                    customizable dismemberment system and a responsive weapon system. I also worked extensively
+                    on the UI and overall project architecture, ensuring scalability and reusability across systems.
+
+                    Throughout the project, I expanded my personal development framework, refining existing modules and
+                    integrating new features to support complex gameplay mechanics.</p>
             </div>
             <div class="project-details">
                 <h4>Info</h4>
-                <ul style="padding-left:18px;">
-                    <li>Team: 3 persone</li>
-                    <li>Engine: Unreal Engine</li>
-                    <li>Ruolo: Gameplay Programmer</li>
-                    <li>Anno: 2024</li>
+                <ul>
+                    <li><span class="material-symbols-outlined">badge</span>Gameplay Programmer</li>
+                    <li><span class="material-symbols-outlined">groups</span>8</li>
+                    <li><span class="material-symbols-outlined">manufacturing</span>Unreal Engine 5.5</li>
+                    <li><span class="material-symbols-outlined">schedule</span>In Development</li>
                 </ul>
             </div>
         </div>
         <div class="project-section">
             <div class="project-section-content">
-                <div class="project-section-title">Sistema di movimento</div>
-                Ho implementato il sistema di movimento del personaggio, con animazioni fluide e gestione degli input.
+                <div class="project-section-title">RPG Systems – Stats, Inventory, Equipment</div>
+                I designed and developed a fully modular RPG system supporting complex mechanics such as stat-based
+                progression, equipment management, inventory handling, and procedural item generation. The system was
+                built as a reusable Unreal Engine plugin, with full support for both Blueprint and C++ workflows.
+                <br><br>
+                Key features include:
+                <ul>
+                    <li>Flexible stat system with core and special stats, dynamic modifiers, and stat operations.</li>
+                    <li>Robust inventory system with stackable items, equipment slots, and rarity/stat-based item
+                        logic.
+                    </li>
+                    <li>Procedural item and gear generation, allowing the creation of randomized equipment with stats
+                        and rarity tiers.
+                    </li>
+                    <li>Seamless integration with UI, including item comparison, stat visualization, and equipment
+                        feedback.
+                    </li>
+                    <li>Designed for extensibility and performance, with clean architecture and subsystem-based logic to
+                        support complex RPG mechanics.
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="project-section">
             <div class="project-section-content">
-                <div class="project-section-title">Gestione UI</div>
-                Ho creato la UI dinamica per la selezione delle armi e la visualizzazione delle statistiche.
+                <div class="project-section-title">Weapon System – Firearms, Melee, Throwable Weapons</div>
+                I developed a fully modular Weapon System designed to support a wide range of weapon types, including
+                firearms, melee weapons, and throwables. The system was built as a reusable plugin for Unreal Engine,
+                optimized for both Blueprint and C++ workflows.
+                <br><br>
+                Key features include:
+                <ul>
+                    <li>A flexible firearm framework with shooting logic, multiple fire modes, recoil, spread, cooldown,
+                        and support for both hitscan and projectile behaviors.
+                    </li>
+                    <li>A melee combat system featuring combo chains, buffered inputs, defense actions, and
+                        customizable attack animation montages with hit detection via notifies.
+                    </li>
+                    <li>A throwable system with modular handling of cooldowns, throw logic, and projectile spawning for
+                        grenades and similar weapons.
+                    </li>
+                    <li>A dynamic crosshair component adaptable to different weapon types and responsive to gameplay
+                        states.
+                    </li>
+                    <li>Support for custom handler logic, animation management, and extendable behaviors for complete
+                        control over weapon functionality.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-title">Dismemberment System – Modular Limb Detachment & Blood FX</div>
+                I designed and implemented a modular Dismemberment System for Unreal Engine, enabling real-time limb
+                detachment, blood effects, and decals with full support for Blueprint and C++ workflows.
+                <br><br>
+                Key features include:
+                <ul>
+                    <li>Runtime skeletal mesh dismemberment with support for individual limb detachment.</li>
+                    <li>Integrated blood decals and Niagara particle effects for visual feedback.</li>
+                    <li>Customizable data-driven setup using Data Assets for skeletal configuration and blood types.
+                    </li>
+                    <li>Support for detached limb management, pooling, and performance optimization.</li>
+                    <li>Built for extensibility, allowing easy overrides for advanced behaviors and integration into
+                        complex characters or combat systems.
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -195,7 +279,6 @@
             </div>
         </div>
     </div>
-    
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
@@ -226,6 +309,7 @@
         worksLink.classList.add('active');
     });
 
+    setupBurgerMenu();
     setupPanelVideoAutoplay();
 </script>
 </BODY>
