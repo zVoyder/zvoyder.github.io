@@ -37,6 +37,10 @@ body {
     background-color: black !important;
 }
 
+body.no-scroll {
+    overflow: hidden !important;
+}
+
 div {
     font-family: 'Montserrat';
 }

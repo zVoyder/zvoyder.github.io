@@ -327,7 +327,8 @@
         </div>
 
         <div class="container d-flex justify-content-center mt-5">
-            <a href="works.html" class="button default-page-link">View All Projects<span class="material-symbols-outlined">arrow_right_alt</span></a>
+            <a href="works.html" class="button default-page-link">View All Projects<span
+                    class="material-symbols-outlined">arrow_right_alt</span></a>
         </div>
     </div>
 
@@ -478,6 +479,10 @@
         window.addEventListener('hashchange', function () {
             if (location.hash.startsWith('#project-')) {
                 fullpage.setAllowScrolling(false);
+                document.body.classList.add('no-scroll');
+            } else {
+                fullpage.setAllowScrolling(true);
+                document.body.classList.remove('no-scroll');
             }
         });
 
@@ -489,7 +494,14 @@
     });
 
     setupPanelVideoAutoplay();
-    setupBurgerMenu();
+    setupBurgerMenu(
+        () => {
+            document.body.classList.add('no-scroll');
+        },
+        () => {
+            document.body.classList.remove('no-scroll');
+        }
+    );
 </script>
 </BODY>
 </HTML>

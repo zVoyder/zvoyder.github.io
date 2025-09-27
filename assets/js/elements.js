@@ -74,11 +74,21 @@ function startLoadingBackground(onComplete) {
     }, 500);
 }
 
-function setupBurgerMenu() {
+function setupBurgerMenu(onOpen, onClose) {
     document.querySelectorAll('.menu__item, .navbar-brand').forEach(item => {
         item.addEventListener('click', () => {
             const toggle = document.getElementById('menu__toggle');
             if (toggle) toggle.checked = false;
         });
+    });
+
+    document.getElementById('menu__toggle').addEventListener('change', function () {
+        if (this.checked) {
+            if (typeof onOpen === 'function')
+                onOpen();
+        } else {
+            if (typeof onClose === 'function')
+                onClose();
+        }
     });
 }

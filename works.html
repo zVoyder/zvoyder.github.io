@@ -316,10 +316,25 @@
         skillsLink.classList.add('inactive');
 
         worksLink.classList.add('active');
+
+        window.addEventListener('hashchange', function () {
+            if (location.hash.startsWith('#project-')) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
+        });
     });
 
-    setupBurgerMenu();
     setupPanelVideoAutoplay();
+    setupBurgerMenu(
+        () => {
+            document.body.classList.add('no-scroll');
+        },
+        () => {
+            document.body.classList.remove('no-scroll');
+        }
+    );
 </script>
 </BODY>
 </HTML>
