@@ -163,7 +163,7 @@
         inset: auto auto 220px 30px;
         transition: inset .3s ease-out;
     }
-    
+
     @media (max-width: 991.98px) {
         &:hover h2 {
             inset: auto auto 290px 30px;

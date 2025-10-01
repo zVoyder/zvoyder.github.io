@@ -95,7 +95,7 @@ nav {
     gap: 16px;
 }
 
-.navbar-logo-link:hover {
+.logo-link:hover {
     filter: brightness(2) sepia(1) saturate(10) hue-rotate(10deg) drop-shadow(0 0 0px #f5e272);
 }
 
@@ -212,8 +212,8 @@ nav {
     background-color: #000;
     transition: all 800ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
     transform: translate3d(0, -100%, 0);
-    
-    ::-webkit-scrollbar{
+
+    ::-webkit-scrollbar {
         display: none;
     }
 }
@@ -370,6 +370,26 @@ nav {
     margin-right: auto;
 }
 
+.project-details li{
+    margin-bottom: 14px;
+    
+    .material-symbols-outlined{
+        font-size: 28px !important;
+    }
+}
+
+.project-logo-link{
+    width: 28px;
+    height: 28px;
+}
+
+.project-links-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 /* Links Styles */
 
 .default-page-link {
@@ -379,9 +399,8 @@ nav {
     color: #f5e272;
     font-size: 18px;
     transition: color 0.2s;
-    
-    .material-symbols-outlined
-    {
+
+    .material-symbols-outlined {
         overflow: hidden;
         font-size: 24px;
     }
@@ -399,11 +418,11 @@ nav {
     body {
         margin-bottom: 150px !important;
     }
-    
-    .section{
+
+    .section {
         margin-bottom: 150px !important;
     }
-    
+
     .panel__content {
         max-width: 98vw;
         padding: 100px 4vw 24px 4vw;
@@ -429,7 +448,7 @@ nav {
         font-size: 1rem;
         padding: 8px 12px;
     }
-    
+
     .d-flex.navbar-links-box {
         display: none !important;
     }
