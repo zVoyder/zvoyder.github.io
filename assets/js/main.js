@@ -51,3 +51,20 @@
 
     return page;
 }
+
+function activateLink(linkId) {
+    const linkIds = ['about-link', 'works-link', 'skills-link', 'cv-link'];
+    linkIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.blur();
+            el.classList.remove('active');
+            el.classList.add('inactive');
+        }
+    });
+    const activeEl = document.getElementById(linkId);
+    if (activeEl) {
+        activeEl.classList.remove('inactive');
+        activeEl.classList.add('active');
+    }
+}

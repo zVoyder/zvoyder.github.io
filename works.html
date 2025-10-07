@@ -33,7 +33,7 @@
         <li><a class="menu__item" href="#About">About</a></li>
         <li><a class="menu__item" href="#Works">Works</a></li>
         <li><a class="menu__item" href="#Skills">Skills</a></li>
-        <li><a class="menu__item" href="cv.html">Resume</a></li>
+        <li><a class="menu__item" href="https://raw.githubusercontent.com/zVoyder/CVDF/813f4cfc2af45660552f05f325b7a5761816848a/out/main.pdf">Resume</a></li>
         <li>
             <a class="menu__item" href="https://zvoyder.itch.io/" target="_blank">
                 <img src="assets/images/Logo/itch-logo.png" alt="Itch" class="logo-link" width="32" height="32">
@@ -77,7 +77,7 @@
                         <a class="nav-link" href="index.html#Skills" id="skills-link">SKILLS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cv.html" id="cv-link">RESUME</a>
+                        <a class="nav-link" href="https://raw.githubusercontent.com/zVoyder/CVDF/813f4cfc2af45660552f05f325b7a5761816848a/out/main.pdf" id="cv-link">RESUME</a>
                     </li>
                 </ul>
             </div>
@@ -278,32 +278,13 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="assets/js/elements.js"></script>
+<script src="assets/js/main.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         startLoadingBackground();
         setupProjectCardHover();
-
-        const aboutLink = document.getElementById('about-link');
-        const worksLink = document.getElementById('works-link');
-        const skillsLink = document.getElementById('skills-link');
-        const cvLink = document.getElementById('cv-link');
-
-        aboutLink.blur();
-        worksLink.blur();
-        skillsLink.blur();
-        cvLink.blur();
-
-        aboutLink.classList.remove('active');
-        worksLink.classList.remove('active');
-        skillsLink.classList.remove('active');
-        cvLink.classList.remove('active');
-        aboutLink.classList.add('inactive');
-        worksLink.classList.add('inactive');
-        skillsLink.classList.add('inactive');
-        cvLink.classList.add('inactive');
-
-        worksLink.classList.add('active');
-
+        
+        activateLink('works-link');
         window.addEventListener('hashchange', function () {
             if (location.hash.startsWith('#project-')) {
                 document.body.classList.add('no-scroll');
