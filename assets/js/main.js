@@ -1,6 +1,6 @@
 ﻿function createFullPage() {
     let page = new fullpage('#fullPage', {
-        licenseKey: 'YOUR_KEY_HERE',
+        licenseKey: "'PNZwaK^k6",
         anchors: ['About', 'Works', 'Skills'],
         navigationTooltips: ['About', 'Works', 'Skills'],
         showActiveTooltip: false,
@@ -9,6 +9,7 @@
         sectionSelector: '.section',
         scrollOverflow: true,
         responsiveWidth: 900,
+        credits: { enabled: false },
         afterLoad:
             function (origin, destination, direction) {
                 const aboutLink = document.getElementById('about-link');
@@ -44,10 +45,6 @@
                 }
             }
     });
-
-    const watermark = document.querySelector('.fp-watermark');
-    if (watermark)
-        watermark.remove();
 
     return page;
 }
